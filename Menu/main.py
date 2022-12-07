@@ -1,8 +1,8 @@
-"""
+'''
 目录的实现
-"""
+'''
 
-import Foler_Manage.Folder_Manage
+import Folder_Manage.Folder_Manage
 
 def login():
     running = 1
@@ -22,20 +22,20 @@ def login():
 
 def userwork():
     info = '''
-    '==========Welcome to use YouDaoYunBiJi==========='
-         输入功能编号，你可以选择相应的功能：
-            1：文件管理
-            2：
-            3：
-            4：
-            0：退出系统
-    ========================================
+======Welcome to use YouDaoYunBiJi========
+      输入功能编号，你可以选择相应的功能：
+         1：文件管理
+         2：
+         3：
+         4：
+         0：退出系统
+==========================================
     '''
-    print(info)
     while True:
+        print(info)
         code = input("请输入功能编号:")
         if code == "1":
-            Foler_Manage.Folder_Manage.Folder_Manage_Menu()
+            Folder_Manage.Folder_Manage.folder_manage_menu()
         if code == "2":
             print(22)
         if code == "3":
