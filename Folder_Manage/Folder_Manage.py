@@ -1,9 +1,9 @@
-'''
+"""
 文件夹管理系统
-'''
+"""
 
 from pathlib import Path
-# import Folder_Factory
+import Folder_Factory
 
 tree_str = ''
 
@@ -26,20 +26,24 @@ def folder_manage_menu():
     while True:
         if code == "1":
             print(tree_str)
-        if code == "2":
-            print(22)
-        if code == "3":
+        elif code == "2":
+            folder_factory()
+        elif code == "3":
             print(33)
-        if code == "4":
+        elif code == "4":
             print(44)
-        if code == "5":
+        elif code == "5":
             print(info)
-        if code == "0":
+        elif code == "0":
             print("感谢您使用有道云笔记文件管理系统!")
             break
+        else:
+            code = input("输入错误，请重新输入:")
+            continue
         print("如果需要再次查看功能编号的对应关系，请输出5")
-        code=input("如需系要继续使用该统，请按输入功能编号：")
+        code = input("如需系要继续使用该统，请按输入功能编号：")
     return
+
 
 def folder_tree(pathname, n=0):
     global tree_str
@@ -47,14 +51,18 @@ def folder_tree(pathname, n=0):
         tree_str += '    |' * n + '-' * 4 + pathname.name + '\n'
     elif pathname.is_dir():
         tree_str += '    |' * n + '-' * 4 + \
-            str(pathname.relative_to(pathname.parent)) + '\\' + '\n'
+                    str(pathname.relative_to(pathname.parent)) + '\\' + '\n'
         for cp in pathname.iterdir():
             folder_tree(cp, n + 1)
 
 
 def folder_factory():
+    flag = input("请输入需要创建还是查询(1表示创建，2表示查询)：")
+    factory = Folder_Factory.Factory()
+    factory.operator_make(flag).operator_result()
     return
 
-#测试
+
+# 测试
 if __name__ == "__main__":
     folder_manage_menu()

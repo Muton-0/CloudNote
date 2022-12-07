@@ -1,11 +1,11 @@
-'''
+"""
 目录的实现
-'''
+"""
 
+# from Folder_Manage.Folder_Manage import folder_manage_menu
 import Folder_Manage.Folder_Manage
 
 def login():
-    running = 1
     print('==========Welcome to YouDaoYunBiJi==========')
     while True:
         user_name = input("请输入用户名:")
@@ -18,9 +18,10 @@ def login():
                 print("密码错误哦！请重新输入账号和密码")
         else:
             print("不存在该用户名，请重新输入。")
-    userwork()
+    user_work()
 
-def userwork():
+
+def user_work():
     info = '''
 ======Welcome to use YouDaoYunBiJi========
       输入功能编号，你可以选择相应的功能：
