@@ -2,6 +2,7 @@
 目录的实现
 """
 
+import Foler_Manage.Folder_Manage
 
 def login():
     running = 1
@@ -34,7 +35,7 @@ def userwork():
     while True:
         code = input("请输入功能编号:")
         if code == "1":
-            print(11)
+            Foler_Manage.Folder_Manage.Folder_Manage_Menu()
         if code == "2":
             print(22)
         if code == "3":
