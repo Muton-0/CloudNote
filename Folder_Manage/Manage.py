@@ -3,8 +3,7 @@
 """
 
 from pathlib import Path
-import Folder_Factory
-
+import Folder_Manage.Folder_Factory
 tree_str = ''
 
 def folder_manage_menu():
@@ -58,7 +57,7 @@ def folder_tree(pathname, n=0):
 
 def folder_factory():
     flag = input("请输入需要创建还是查询(1表示创建，2表示查询)：")
-    factory = Folder_Factory.Factory()
+    factory = Folder_Manage.Folder_Factory.Factory()
     factory.operator_make(flag).operator_result()
     return
 

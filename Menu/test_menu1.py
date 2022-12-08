@@ -3,7 +3,7 @@
 """
 
 # from Folder_Manage.Folder_Manage import folder_manage_menu
-import Folder_Manage.Folder_Manage
+import Folder_Manage.Manage
 
 def login():
     print('==========Welcome to YouDaoYunBiJi==========')
@@ -36,7 +36,7 @@ def user_work():
         print(info)
         code = input("请输入功能编号:")
         if code == "1":
-            Folder_Manage.Folder_Manage.folder_manage_menu()
+            Folder_Manage.Manage.folder_manage_menu()
         if code == "2":
             print(22)
         if code == "3":
