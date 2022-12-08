@@ -4,7 +4,7 @@
 
 # from Folder_Manage.Folder_Manage import folder_manage_menu
 import Folder_Manage.Manage
-
+import RecycleBin.Deletefile
 def login():
     print('==========Welcome to YouDaoYunBiJi==========')
     while True:
@@ -26,9 +26,9 @@ def user_work():
 ======Welcome to use YouDaoYunBiJi========
       输入功能编号，你可以选择相应的功能：
          1：文件管理
-         2：
-         3：
-         4：
+         2：回收站管理
+         3：文件分享
+         4：笔记修改
          0：退出系统
 ==========================================
     '''
@@ -38,7 +38,7 @@ def user_work():
         if code == "1":
             Folder_Manage.Manage.folder_manage_menu()
         if code == "2":
-            print(22)
+            RecycleBin.Deletefile()
         if code == "3":
             print(33)
         if code == "0":
