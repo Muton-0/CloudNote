@@ -1,6 +1,6 @@
 # 文件存储管理信息
 import os
-
+import Folder_Manage.Manage
 # 判断是否首次使用系统
 def is_first_use():
     if os.path.exists('flag.txt') == False:
@@ -77,6 +77,7 @@ def root_login():
         # 信息匹配
         if root_number == root['rnum'] and root_password == root['rpwd']:
             print('管理员登陆成功！')
+            Folder_Manage.Manage.folder_manage_menu()
             break
         else:
             print('很遗憾！验证失败')
@@ -115,6 +116,7 @@ def user_login():
                 if user_pwd == user_info['u_pwd']:
                     print('登录成功！')
                     # 此处根据需求，可以跳转到登陆成功之后的操作
+                    Folder_Manage.Manage.folder_manage_menu()
                     break
 
         if flag == 1:
