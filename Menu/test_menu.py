@@ -38,7 +38,11 @@ def user_work():
         if code == "1":
             Folder_Manage.Manage.folder_manage_menu()
         if code == "2":
-            RecycleBin.Deletefile()
+            flag = input("请输入需要删除还是恢复(1表示删除，2表示恢复)：")
+            if flag == "1":
+                RecycleBin.Deletefile.deletefile()
+            else:
+                RecycleBin.Deletefile.recover()
         if code == "3":
             print(33)
         if code == "0":

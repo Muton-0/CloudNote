@@ -30,6 +30,24 @@ class Folder_Search(Folder_Operator):
         else:
             print('\n')
 
+class Folder_Alter(Folder_Operator):
+    def operator_result(self):
+        flag = 0
+        file_name = input("请输入搜索的文件的名字:")
+        for root, dirs, files in os.walk(r"..\YunDisk"):
+            for file in files:
+                if os.path.basename(file) == file_name:
+                    flag = 1
+                    print(os.path.join(root, file))
+                    f1 = open('os.path.join(root, file)', 'a', encoding='UTF-8')
+                    str=input('请对该文件进行修改：')
+                    f1.write(str)
+                    print(f1)
+        if flag == 0:
+            print("未找到该名字的文件。\n")
+        else:
+            print('\n')
+
 
 class Factory:
     def operator_make(self, flag):
@@ -37,6 +55,8 @@ class Factory:
             return Folder_Create()
         elif flag == '2':
             return Folder_Search()
+        elif flag =='3':
+            return Folder_Alter()
 
 
 def mkdir(path):
