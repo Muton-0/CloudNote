@@ -57,13 +57,15 @@ def recover():
     onfile.write(transit)
     onfile.close()
 
-
-if __name__=='__main__':
-
+def binmanage():
     flag = input("请输入需要删除还是恢复(1表示删除，2表示恢复)：")
     if flag == "1":
         deletefile()
     else:
         recover()
+
+if __name__=='__main__':
+    binmanage()
+
 
 

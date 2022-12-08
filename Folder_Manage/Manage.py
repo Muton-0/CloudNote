@@ -4,6 +4,7 @@
 
 from pathlib import Path
 import Folder_Manage.Folder_Factory
+import RecycleBin.Deletefile
 tree_str = ''
 
 def folder_manage_menu():
@@ -11,8 +12,8 @@ def folder_manage_menu():
 ===========文件管理系统================
    输入功能编号，你可以选择相应的功能：
       1：查看网盘文件
-      2：创建、查询
-      3：删除、移动
+      2：创建、查询、修改
+      3：删除
       4：上传或下载
       5：功能编号说明
       0：退出系统
@@ -28,7 +29,7 @@ def folder_manage_menu():
         elif code == "2":
             folder_factory()
         elif code == "3":
-            print(33)
+            RecycleBin.Deletefile().deletefile()
         elif code == "4":
             print(44)
         elif code == "5":
@@ -56,7 +57,7 @@ def folder_tree(pathname, n=0):
 
 
 def folder_factory():
-    flag = input("请输入需要创建还是查询(1表示创建，2表示查询)：")
+    flag = input("请输入需要创建还是查询(1表示创建，2表示查询、3表示修改)：")
     factory = Folder_Manage.Folder_Factory.Factory()
     factory.operator_make(flag).operator_result()
     return
