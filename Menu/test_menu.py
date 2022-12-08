@@ -5,21 +5,6 @@
 # from Folder_Manage.Folder_Manage import folder_manage_menu
 import Folder_Manage.Manage
 import RecycleBin.Deletefile
-def login():
-    print('==========Welcome to YouDaoYunBiJi==========')
-    while True:
-        user_name = input("请输入用户名:")
-        if user_name == "admin":
-            password = input("请输入密码:")
-            if password == "1":
-                print("欢迎您,亲爱的用户")
-                break
-            else:
-                print("密码错误哦！请重新输入账号和密码")
-        else:
-            print("不存在该用户名，请重新输入。")
-    user_work()
-
 
 def user_work():
     info = '''
